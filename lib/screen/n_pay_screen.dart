@@ -1,8 +1,8 @@
 // Screen 3: Easily Payment Method Screen
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:nearfield/neon_button.dart';
-import 'package:nearfield/user_provider.dart';
+import 'package:nearfield/ui/neon_button.dart';
+import 'package:nearfield/provider/user_provider.dart';
 
 class NPayScreen extends ConsumerStatefulWidget {
   const NPayScreen({super.key});

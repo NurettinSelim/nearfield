@@ -39,6 +39,7 @@ dependencies:
   go_router: ^14.2.7
   flutter_riverpod: ^2.5.1
   flutter_nfc_hce: ^0.1.8
+  gradient_borders: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -66,6 +67,7 @@ flutter:
   assets:
     - assets/logo.png
     - assets/text_logo.png
+    - assets/radar_logo.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

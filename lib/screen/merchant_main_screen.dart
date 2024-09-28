@@ -1,7 +1,7 @@
 // merchant_main_screen.dart
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nearfield/neon_button.dart';
+import 'package:nearfield/ui/neon_button.dart';
 
 class MerchantMainScreen extends StatelessWidget {
   const MerchantMainScreen({super.key});

@@ -1,13 +1,14 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-// UserProvider to manage user's role and payment amount using Riverpod
+enum UserRole { merchant, waiter }
+
 class UserState {
-  final String role;
+  final UserRole role;
   final double paymentAmount;
 
   UserState({required this.role, required this.paymentAmount});
 
-  UserState copyWith({String? role, double? paymentAmount}) {
+  UserState copyWith({UserRole? role, double? paymentAmount}) {
     return UserState(
       role: role ?? this.role,
       paymentAmount: paymentAmount ?? this.paymentAmount,
@@ -16,9 +17,9 @@ class UserState {
 }
 
 class UserNotifier extends StateNotifier<UserState> {
-  UserNotifier() : super(UserState(role: '', paymentAmount: 0.0));
+  UserNotifier() : super(UserState(role: UserRole.waiter, paymentAmount: 0.0));
 
-  void setRole(String role) {
+  void setRole(UserRole role) {
     state = state.copyWith(role: role);
   }
 

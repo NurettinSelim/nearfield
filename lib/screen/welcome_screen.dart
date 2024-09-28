@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_nfc_hce/flutter_nfc_hce.dart';
 import 'package:go_router/go_router.dart';
-import 'package:nearfield/neon_button.dart';
+import 'package:nearfield/ui/neon_button.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -53,7 +53,7 @@ class WelcomeScreen extends StatelessWidget {
                   var content = "https://www.google.com";
 
 //start nfc hce
-                  var result = await flutterNfcHcePlugin.startNfcHce(content,
+                  await flutterNfcHcePlugin.startNfcHce(content,
                       mimeType: 'application/json', persistMessage: true);
 
 //stop nfc hce
