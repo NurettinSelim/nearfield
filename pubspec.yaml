@@ -68,6 +68,8 @@ flutter:
     - assets/logo.png
     - assets/text_logo.png
     - assets/radar_logo.png
+    - assets/success.png
+    - assets/loading.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

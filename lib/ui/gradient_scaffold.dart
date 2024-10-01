@@ -15,7 +15,7 @@ class GradientScaffold extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
-        child: body,
+        child: SafeArea(child: body),
       ),
     );
   }

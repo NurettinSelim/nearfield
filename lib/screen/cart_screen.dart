@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:nearfield/provider/cart_provider.dart';
 import 'package:nearfield/provider/user_provider.dart';
 import 'package:nearfield/ui/detail_header.dart';
 import 'package:nearfield/ui/detail_item.dart';
+import 'package:nearfield/ui/gradient_button.dart';
 import 'package:nearfield/ui/gradient_scaffold.dart';
 
 class CartScreen extends ConsumerWidget {
@@ -55,38 +57,12 @@ class CartScreen extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  GestureDetector(
-                    onTap: () {},
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          border: Border.all(color: const Color(0xFF28EFC9)),
-                          gradient: const LinearGradient(
-                            colors: [
-                              Color(0xFF008fc9),
-                              Color(0xFF00dbab),
-                            ],
-                            begin: Alignment.centerLeft,
-                            end: Alignment.centerRight,
-                          ),
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                        child: const Padding(
-                          padding:
-                              EdgeInsets.symmetric(horizontal: 40, vertical: 8),
-                          child: Text(
-                            'Start NFC Payment',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  GradientButton(
+                    text: 'Start NFC Payment',
+                    onPressed: () {
+                      context.go('/scan');
+                    },
+                  )
                 ],
               ),
           ],

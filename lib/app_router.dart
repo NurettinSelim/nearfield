@@ -5,6 +5,7 @@ import 'package:nearfield/screen/payment_sources_screen.dart';
 import 'package:nearfield/screen/login_screen.dart';
 import 'package:nearfield/screen/categories_screen.dart';
 import 'package:nearfield/screen/items_screen.dart';
+import 'package:nearfield/screen/scan_screen.dart';
 
 class AppRouter {
   final GoRouter router;
@@ -55,7 +56,11 @@ class AppRouter {
               builder: (context, state) {
                 return const CartScreen();
               },
-            )
+            ),
+            GoRoute(
+              path: '/scan',
+              builder: (context, state) => const ScanScreen(),
+            ),
           ],
         );
 }
