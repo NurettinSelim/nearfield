@@ -100,7 +100,7 @@ class _DetailItemState extends ConsumerState<DetailItem> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  widget.item.price.toStringAsFixed(2),
+                                  widget.item.price.toStringAsFixed(5),
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 16,

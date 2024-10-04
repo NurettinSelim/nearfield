@@ -49,7 +49,7 @@ class CartScreen extends ConsumerWidget {
                   SizedBox(
                     width: double.infinity,
                     child: Text(
-                      'Total: ${cart.total().toStringAsFixed(2)} SOL',
+                      'Total: ${cart.total().toStringAsFixed(5)} SOL',
                       style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,

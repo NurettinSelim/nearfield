@@ -45,7 +45,7 @@ class _NPayScreenState extends ConsumerState<NPayScreen> {
               Column(
                 children: [
                   NeonButton(
-                    text: 'Amount: \$${paymentAmount.toStringAsFixed(2)}',
+                    text: 'Amount: \$${paymentAmount.toStringAsFixed(5)}',
                     onPressed: () {
                       _showAmountDialog(userNotifier);
                     },
@@ -58,7 +58,7 @@ class _NPayScreenState extends ConsumerState<NPayScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                              'Transfer request of \$${paymentAmount.toStringAsFixed(2)} sent!'),
+                              'Transfer request of \$${paymentAmount.toStringAsFixed(5)} sent!'),
                         ),
                       );
                     },
