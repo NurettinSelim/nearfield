@@ -73,22 +73,22 @@ class DatabaseNotifier extends StateNotifier<DatabaseState> {
         Category(
           name: 'Specials',
           items: [
-            Item(name: 'Margarita', price: 8),
-            Item(name: 'Old Fashioned', price: 10),
+            Item(name: 'Margarita', price: 0.0695789638),
+            Item(name: 'Old Fashioned', price: 0.1391579275),
           ],
         ),
         Category(
           name: 'Coffee',
           items: [
-            Item(name: 'Latte', price: 5),
-            Item(name: 'Espresso', price: 3),
+            Item(name: 'Latte', price: 0.0347894819),
+            Item(name: 'Espresso', price: 0.0208736891),
           ],
         ),
         Category(
           name: 'Alcohol',
           items: [
-            Item(name: 'Beer', price: 6),
-            Item(name: 'Wine', price: 10),
+            Item(name: 'Beer', price: 0.0417473783),
+            Item(name: 'Wine', price: 0.0695789638),
           ],
         ),
       ],
@@ -100,15 +100,15 @@ class DatabaseNotifier extends StateNotifier<DatabaseState> {
         Category(
           name: 'Snacks',
           items: [
-            Item(name: 'Chips', price: 1),
-            Item(name: 'Candy', price: 2),
+            Item(name: 'Chips', price: 0.0069578964),
+            Item(name: 'Candy', price: 0.0139157928),
           ],
         ),
         Category(
           name: 'Drinks',
           items: [
-            Item(name: 'Soda', price: 1.5),
-            Item(name: 'Water', price: 1),
+            Item(name: 'Soda', price: 0.0104368446),
+            Item(name: 'Water', price: 0.0069578964),
           ],
         ),
       ],
