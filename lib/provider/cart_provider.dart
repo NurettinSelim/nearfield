@@ -56,6 +56,10 @@ class CartNotifier extends StateNotifier<CartState> {
       state = state.copyWith(items: items);
     }
   }
+
+  void clear() {
+    state = state.copyWith(items: {}, paymentSource: null);
+  }
 }
 
 final cartProvider = StateNotifierProvider<CartNotifier, CartState>((ref) {

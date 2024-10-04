@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:nearfield/provider/cart_provider.dart';
 import 'package:nearfield/provider/scan_provider.dart';
 import 'package:nearfield/ui/detail_header.dart';
 import 'package:nearfield/ui/gradient_button.dart';
@@ -91,11 +92,11 @@ class TXPending extends StatelessWidget {
   }
 }
 
-class TXComplete extends StatelessWidget {
+class TXComplete extends ConsumerWidget {
   const TXComplete({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -119,6 +120,8 @@ class TXComplete extends StatelessWidget {
           text: 'Home Page',
           onPressed: () {
             context.go('/payment-sources');
+            ref.read(scanProvider.notifier).setState(ScanStateEnum.IDLE);
+            ref.read(cartProvider.notifier).clear();
           },
         )
       ],
