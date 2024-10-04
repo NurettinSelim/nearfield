@@ -26,15 +26,17 @@ class DetailHeader extends ConsumerWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            if (context.canPop())
-              IconButton(
+            Opacity(
+              opacity: context.canPop() ? 1 : 0,
+              child: IconButton(
                 icon: const Icon(Icons.arrow_back, color: Colors.white),
                 onPressed: () {
                   if (context.canPop()) context.pop();
                 },
               ),
+            ),
             Expanded(
-              child: Image.asset('assets/radar_logo.png', height: 36),
+              child: Image.asset('assets/starbucks.png', height: 48),
             ),
             Opacity(
               opacity: user.role == UserRole.waiter ? 1 : 0,
