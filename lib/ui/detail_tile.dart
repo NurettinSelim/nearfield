@@ -48,7 +48,7 @@ class DetailTile extends ConsumerWidget {
                 padding: const EdgeInsets.all(12.0),
                 child: Text(
                   title,
-                  style: const TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white, fontSize: 18),
                 ),
               ),
             ),
