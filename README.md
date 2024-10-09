@@ -1,16 +1,23 @@
-# nearfield
+# NearField
+## *NearField is a modular protocol that allows data transfer via NFC, triggering actions on the Solana blockchain.*
 
-A new Flutter project.
+*Website:* https://nearfield.framer.website/
 
-## Getting Started
+*X:* https://x.com/nearfieldp
 
-This project is a starting point for a Flutter application.
+Businesses can easily integrate NearField into their own applications with our SDK or can open an account on our app based on their usecases and perform the transfer and transaction of desired data. This makes it possible to send any data securely and quickly via NFC on the blockchain.
 
-A few resources to get you started if this is your first Flutter project:
+*Brief overview of how our app works*
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![1](https://github.com/user-attachments/assets/103424ec-89e6-44fc-92f2-30ec8e97ddc4)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Our protocol receives data determined by businesses in a modular structure with NFC and carries out specified transactions with Actions. 
+
+
+*The only thing the customer needs to do is scan the NFC.*
+
+![2](https://github.com/user-attachments/assets/8e79be4c-4a5e-4079-a05b-52e65167850c)
+
+
+In the *Data via NFC* section shown above, businesses can customize it according to their needs. As shown in the image, the rest of the structure is exactly the same as Action Execution and Lifecycle.
