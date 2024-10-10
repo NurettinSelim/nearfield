@@ -40,6 +40,8 @@ dependencies:
   flutter_riverpod: ^2.5.1
   flutter_nfc_hce: ^0.1.8
   gradient_borders: ^1.0.1
+  http: ^0.13.3
+  webview_flutter: ^4.0.2
 
 dev_dependencies:
   flutter_test:
