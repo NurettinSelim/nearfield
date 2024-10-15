@@ -7,7 +7,7 @@
 
 Businesses can easily integrate NearField into their own applications with our SDK or can open an account on our app based on their usecases and perform the transfer and transaction of desired data. This makes it possible to send any data securely and quickly via NFC on the blockchain.
 
-*Brief overview of how our app works*
+**Brief overview of how our app works**
 
 ![1](https://github.com/user-attachments/assets/103424ec-89e6-44fc-92f2-30ec8e97ddc4)
 
