@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
 class GradientButton extends StatelessWidget {
-  const GradientButton(
-      {super.key, required this.text, this.trailing, this.onPressed});
+  const GradientButton({super.key, required this.text, this.trailing, this.onPressed});
   final String text;
   final Widget? trailing;
   final void Function()? onPressed;
@@ -37,7 +36,7 @@ class GradientButton extends StatelessWidget {
                     text,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.center,

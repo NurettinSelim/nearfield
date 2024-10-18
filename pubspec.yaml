@@ -42,6 +42,8 @@ dependencies:
   gradient_borders: ^1.0.1
   http: ^0.13.3
   webview_flutter: ^4.0.2
+  qr_flutter: ^4.1.0
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:

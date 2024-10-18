@@ -3,10 +3,12 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:nearfield/provider/cart_provider.dart';
 import 'package:nearfield/provider/user_provider.dart';
+import 'package:nearfield/service/mercuryo_service.dart';
 import 'package:nearfield/ui/detail_header.dart';
 import 'package:nearfield/ui/detail_item.dart';
 import 'package:nearfield/ui/gradient_button.dart';
 import 'package:nearfield/ui/gradient_scaffold.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CartScreen extends ConsumerWidget {
   const CartScreen({
@@ -44,6 +46,7 @@ class CartScreen extends ConsumerWidget {
               )
             else
               Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   const Divider(),
                   SizedBox(
@@ -57,11 +60,35 @@ class CartScreen extends ConsumerWidget {
                     ),
                   ),
                   const SizedBox(height: 8),
-                  GradientButton(
-                    text: 'Start NFC Payment',
-                    onPressed: () {
-                      context.go('/scan');
-                    },
+                  Row(
+                    children: [
+                      Expanded(
+                        child: GradientButton(
+                          text: 'Start NFC Payment',
+                          onPressed: () {
+                            context.go('/scan');
+                          },
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Expanded(
+                        child: GradientButton(
+                          text: 'Pay with Fiat (Mercuryo)',
+                          onPressed: () {
+                            MercuryoService()
+                                .createPaymentSession(
+                              'SOL',
+                              cart.total().toString(),
+                              "USER_WALLET_ADDRESS",
+                            )
+                                .then((widgetUrl) {
+                              // open the widgetUrl in a webview
+                              launchUrl(Uri.parse(widgetUrl));
+                            });
+                          },
+                        ),
+                      )
+                    ],
                   )
                 ],
               ),
