@@ -73,7 +73,8 @@ class CartScreen extends ConsumerWidget {
                       const SizedBox(width: 8),
                       Expanded(
                         child: GradientButton(
-                          text: 'Pay with Fiat (Mercuryo)',
+                          text: 'Pay with Fiat',
+                          subtext: '(Mercuryo)',
                           onPressed: () {
                             MercuryoService()
                                 .createPaymentSession(

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class GradientButton extends StatelessWidget {
-  const GradientButton({super.key, required this.text, this.trailing, this.onPressed});
+  const GradientButton({super.key, required this.text, this.subtext, this.trailing, this.onPressed});
   final String text;
+  final String? subtext;
   final Widget? trailing;
   final void Function()? onPressed;
 
@@ -32,12 +33,17 @@ class GradientButton extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Text(
-                    text,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                  child: RichText(
+                    text: TextSpan(
+                      text: text,
+                      children: [
+                        TextSpan(text: subtext != null ? "\n$subtext" : "", style: const TextStyle(fontSize: 10))
+                      ],
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     textAlign: TextAlign.center,
                   ),
